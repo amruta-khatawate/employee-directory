@@ -1,10 +1,10 @@
-package initializer;
+package com.example.employee_directory_backend.controller.initializer;
 
-import model.Employee;
+import com.example.employee_directory_backend.controller.model.Employee;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
-import repository.EmployeeRepository;
+import com.example.employee_directory_backend.controller.repository.EmployeeRepository;
 import tools.jackson.databind.ObjectMapper;
 
 import java.io.InputStream;
@@ -37,10 +37,10 @@ public class EmployeeDataLoader implements CommandLineRunner {
 
         // Read JSON file and convert it into Employee objects
         try (InputStream inputStream = getClass().
-                                getResourceAsStream("/employees.json")) {
+                                getResourceAsStream("/employee.json")) {
 
             if (inputStream == null) {
-                throw new IllegalStateException("employees.json file nt found");
+                throw new IllegalStateException("employee.json file not found");
             }
 
             Employee[] employeeArray = objectMapper.readValue(
