@@ -1,4 +1,4 @@
-package com.example.employee_directory_backend.controller.model;
+package com.example.employee_directory_backend.model;
 
 import jakarta.persistence.*;
 import lombok.*;

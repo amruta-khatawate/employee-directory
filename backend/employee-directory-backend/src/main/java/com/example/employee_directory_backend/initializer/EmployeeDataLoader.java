@@ -1,10 +1,10 @@
-package com.example.employee_directory_backend.controller.initializer;
+package com.example.employee_directory_backend.initializer;
 
-import com.example.employee_directory_backend.controller.model.Employee;
+import com.example.employee_directory_backend.model.Employee;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
-import com.example.employee_directory_backend.controller.repository.EmployeeRepository;
+import com.example.employee_directory_backend.repository.EmployeeRepository;
 import tools.jackson.databind.ObjectMapper;
 
 import java.io.InputStream;
