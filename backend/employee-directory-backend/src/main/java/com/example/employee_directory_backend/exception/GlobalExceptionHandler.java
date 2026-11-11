@@ -31,10 +31,23 @@ public class GlobalExceptionHandler {
                 request.getRequestURI()
         );
 
-        return ResponseEntity.status(HttpStatus.NOT_FOUND)
-                .body(response);
+        return new ResponseEntity<>(response, HttpStatus.NOT_FOUND);
     }
 
+
+    @ExceptionHandler(DuplicateEmailException.class)
+    public ResponseEntity<ApiErrorResponse> handleDuplicateEmail(DuplicateEmailException ex , HttpServletRequest request){
+
+        ApiErrorResponse response = new ApiErrorResponse(
+
+                LocalDateTime.now(),
+                HttpStatus.NOT_ACCEPTABLE.value(),
+                ex.getMessage(),
+                request.getRequestURI()
+        );
+
+        return new ResponseEntity<>(response, HttpStatus.NOT_ACCEPTABLE);
+    }
 
 //    private ResponseEntity<ErrorResponse> buildResponse(HttpStatus status, String message, String path){
 //
