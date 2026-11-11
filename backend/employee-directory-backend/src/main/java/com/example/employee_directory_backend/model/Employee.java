@@ -19,7 +19,9 @@ public class Employee {
     private Integer id;
     private String firstName;
     private String lastName;
+    @Column(unique = true, nullable = false)
     private String email;
+    @Column(nullable = false)
     private String phone;
     private String department;
     private String designation;
