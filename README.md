@@ -7,7 +7,7 @@ This is a learning project. I'm using it to practice real-world backend concerns
 ## ✅ Done
 - Create, get and delete employee APIs
 - Global exception handling with `@ControllerAdvice` and custom error responses
-- [PostgreSQL integration, if done]
+- PostgreSQL integration
 
 ## 🔄 Roadmap
 - [ ] Update employee API
@@ -35,7 +35,6 @@ Java · Spring Boot · Spring Data JPA · PostgreSQL · Angular · TypeScript ·
 | GET | `/api/employees/{id}` | Get employee by ID |
 | DELETE | `/api/employees/{id}` | Delete employee |
 
-*Change these paths to match your controller.*
 
 ## ⚠️ Error Response Format
 
